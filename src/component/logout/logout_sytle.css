@@ -1,0 +1,11 @@
+.logout {
+    color: #ff2e63;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: none;
+
+}
+.logout:hover {
+    border-bottom: 3px #ff2e63 solid;
+}

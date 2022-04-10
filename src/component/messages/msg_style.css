@@ -1,0 +1,20 @@
+
+#error{
+    background-color: rgb(221, 90, 85);
+    height: 60px;
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+#success{
+    background-color: rgb(28, 201, 80);
+    color: #FFF;
+    height: 40px;
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}

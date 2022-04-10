@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    height: 100%;
+}
+.container {
+    width: 1170px;
+    margin: auto;
+}
+
+.header {
+    height: 230px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.otherInfo p {
+    text-decoration: underline;
+    font-weight: bold;
+}
+#start, #end {
+    text-align: center;
+}
+form.formquiz {
+    display: flex;
+    flex-direction: column;
+}
+.theExam {
+    margin-top: 35px;
+}
+.QHeader {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.theExam .question {
+    padding: 10px;
+    margin: 20px;
+}
+.theExam .chose {
+    border: 2px #ff2e63 solid;
+}
+
+.theExam .write {
+    border: 2px #08d9d6 solid;
+
+}
+
+.theExam .question .answers {
+    margin-right: 15px;
+}
+
+input#go {
+    font-family: 'Cairo', sans-serif;
+    background: none;
+    width: 300px;
+    cursor: pointer;
+    height: 60px;
+    color: #000;
+    border: #252a34 2px solid;
+    align-self: center;
+}
+input#go:hover {
+    transition: 0.5s ease;
+    background-color: #252a34;
+    color: #FFF;
+    cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+    .container {
+        width: 600px;
+        margin: auto;
+    }
+    input#go {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container {
+        width: 400px;
+        margin: auto;
+    }
+    
+    input#go {
+        text-align: center;
+    }
+}

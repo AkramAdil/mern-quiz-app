@@ -1,0 +1,71 @@
+.welcome .forms {
+    margin-top: 80px;
+    padding-right: 70px;
+    position: relative;
+    top: 45px;
+}
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s ease;
+
+}
+#haveAccount, #noAccount, .form-guide {
+    color: #000;
+}
+#haveAccount:hover, #noAccount:hover {
+    color: #FFF;
+}
+.welcome .forms input {
+    display: block;
+    margin-top: 25px;
+    background-color: #FFF;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border: #636363 1px solid;
+    border-radius: 5px;
+}
+.welcome .forms input[type=submit]{
+    font-family: 'Cairo', sans-serif;
+    width: 145px;
+    color: #000;
+    border: #252a34 2px solid;
+    background: none;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.welcome .forms input[type=submit]:hover {
+    transition: 0.5s ease;
+    background-color: #252a34;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.welcome .forms button {
+    font-family: 'Cairo', sans-serif;
+    width: 145px;
+    height: 50px;
+    background-color: #252a34;
+    color: #FFF;
+    border: #252a34 2px solid;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+
+#register {
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#register #haveAccount, #noAccount{
+    cursor: pointer;
+    text-decoration: underline;
+}

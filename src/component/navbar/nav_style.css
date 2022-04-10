@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+.home-nav {
+    background-color: #eaeaea;
+    display: flex;
+    height: 70px;
+}
+
+.home-nav ul {
+    justify-content: right;
+    display: flex;
+    list-style: none;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+.home-nav ul li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+}
+
+.home-nav ul li a {
+    text-decoration: none;
+    color: #000;
+    margin: 10px;
+    font-size: 18px;
+}
+.home-nav ul li:hover {
+    transition: 0.5s ease;
+    background-color: #252a34;
+
+}
+.home-nav ul li:hover a {
+    color: #FFF;
+    transition: 0.5s ease;
+
+}
