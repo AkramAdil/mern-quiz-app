@@ -10,7 +10,7 @@ function InfoHeader({user}) {
                 <p>اسم الطالب: <span>{user?user.name:"جاري التحميل"}</span></p>
             </div>
             <div className="otherInfo">
-                <p>الوقت المتبقي: <span>60 دقيقية</span></p>
+                <p>مدة الامتحان: <span>دقيقتان</span></p>
                 <Logout/>
             </div>
         </div>
