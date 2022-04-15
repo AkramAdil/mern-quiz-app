@@ -70,22 +70,34 @@ input#go:hover {
     color: #FFF;
     cursor: pointer;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     .container {
-        width: 600px;
+        width: 900px;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 540px;
         margin: auto;
     }
     input#go {
         text-align: center;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
     .container {
-        width: 400px;
+        width: 100%;
         margin: auto;
     }
-    
-    input#go {
-        text-align: center;
+    .header {
+        flex-direction: column;
+        align-items: center;
     }
 }
