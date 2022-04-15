@@ -16,21 +16,21 @@
 .top-table {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .top-table .table-name {
     align-self: center;
 }
-.top-table .tabel-head {
-    display: flex;
+.top-table table .tabel-head {
     background-color: #08d9d6;
-    justify-content: space-around;
     margin-bottom: 3px;
 }
+table td,table th {
+    text-align: center;        
+}
 .top-table .row {
-    display: flex;
-    justify-content: space-around;
+
     background-color: blueviolet;
     color: #FFF;
     border: 1px black solid;
 }
+
