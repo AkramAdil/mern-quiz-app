@@ -1,6 +1,7 @@
 import {Outlet, Navigate } from "react-router-dom"
 import axios from "axios";
 import { useEffect, useState } from "react";
+import LoadingBar from "./loadingBar";
 
 function Child({isAuth}) {
     return (
@@ -13,7 +14,7 @@ const Protected = function() {
 
     useEffect(()=>{
         axios({
-            url:"https://arquiz.herokuapp.com/ensure",
+            url:"http://localhost:9090/ensure",
             method: "GET",
             headers: {
                 "x-access-token": localStorage.getItem("token")
@@ -23,7 +24,7 @@ const Protected = function() {
     },[setAuth])
     console.log(isAuth)
     if(isAuth===undefined) {
-        return <>still loading...</>
+        return <LoadingBar/>
     }
     return <Child isAuth={isAuth}/>
 }

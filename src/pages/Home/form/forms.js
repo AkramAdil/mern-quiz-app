@@ -20,6 +20,7 @@ export default function Forms() {
     })
     const [errors,setErrors] = useState(null)
     const [success,setSuccess] = useState(null)
+    const [loading,setLoading] = useState(false)
 
     //const {user, setUser} = useContext(UserContext)
     const history = useNavigate()
@@ -33,12 +34,13 @@ export default function Forms() {
         }
     }
     async function login(e){
+        setLoading(true)
         e.preventDefault()
         // eslint-disable-next-line
         const response = await axios(
             {
                 method: 'POST',
-                url: "https://arquiz.herokuapp.com/login",
+                url: "http://localhost:9090/login",
                 data: {
                     seatNum:loginValues.seatNum,
                     password:loginValues.password,
@@ -48,6 +50,7 @@ export default function Forms() {
             if(response.data.errMsg) {
                 setSuccess(null)
                 setErrors(response.data.errMsg)
+                setLoading(false)
             }else {
                 history("/quiz")
                 localStorage.setItem("token", response.data.token)
@@ -57,12 +60,13 @@ export default function Forms() {
         }).catch(err=>console.log(err))
     }
     async function register(e){
+        setLoading(true)
         e.preventDefault()
         // eslint-disable-next-line
         const response = await axios(
             {
                 method: 'POST',
-                url: "https://arquiz.herokuapp.com/register",
+                url: "http://localhost:9090/register",
                 data: {
                     name:registerValues.name, 
                     email:registerValues.email, 
@@ -73,10 +77,12 @@ export default function Forms() {
         ).then(response=>{
             if(response.data.errMsg) {
                 setErrors(response.data.errMsg)
+                setLoading(false)
             } else{
                 setSuccess(response.data.succMsg)
                 setErrors(null)
                 setFormType('login')
+                setLoading(false)
             }
         })
     }
@@ -101,6 +107,7 @@ export default function Forms() {
                 login={login}
                 formValues={loginValues}
                 handelValues={handleLoginValues}
+                loading={loading}
                 />
             )
 
@@ -111,6 +118,7 @@ export default function Forms() {
                 register={register}
                 formValues={registerValues}
                 handelValues={handleRegisterValues}
+                loading={loading}
                 />
             )
         default:
