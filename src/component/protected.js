@@ -14,7 +14,7 @@ const Protected = function() {
 
     useEffect(()=>{
         axios({
-            url:"http://localhost:9090/ensure",
+            url:"https://arquiz.herokuapp.com/ensure",
             method: "GET",
             headers: {
                 "x-access-token": localStorage.getItem("token")

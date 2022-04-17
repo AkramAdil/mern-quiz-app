@@ -1,7 +1,6 @@
 import React from 'react';
 import { ErrorMessages,SuccessMessages } from '../../../../component/messages/messages';
-
-function Login({errors,success,login,formValues,handelValues, whitchForm}) {
+function Login({errors,success,login,formValues,handelValues, whitchForm,loading}) {
     return (
         <div id="login">
             <ErrorMessages errorMsg={errors}/>
@@ -10,7 +9,7 @@ function Login({errors,success,login,formValues,handelValues, whitchForm}) {
             <form onSubmit={login}>
                 <input name="seatNum" type="number" value={formValues.seatNum} onChange={handelValues} placeholder="اكتب رقم جلوسك"/>
                 <input name="password" type="password" value={formValues.password} onChange={handelValues} placeholder="اكتب كلمة السر"/>
-                <input type="submit" value="سجل الدخول"/>
+                <input type="submit" value="سجل الدخول" disabled={loading}/>
                 <button id="creatAccount" onClick={whitchForm}>إنشاء حساب</button>
             </form>
         </div>

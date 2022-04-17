@@ -1,7 +1,7 @@
 import React from 'react';
 import { ErrorMessages } from '../../../../component/messages/messages';
 
-function Register({whitchForm,register,errors,formValues,handelValues}) {
+function Register({whitchForm,register,errors,formValues,handelValues,loading}) {
     return (
         <div id="register">
             <p className="form-guide">أدخل بياناتك لإنشاء حساب خاص بك</p>
@@ -12,7 +12,7 @@ function Register({whitchForm,register,errors,formValues,handelValues}) {
                 <input type="email" name="email" placeholder="اكتب بريد الكتروني" onChange={handelValues} value={formValues.email}/>
                 <input type="number" name="seatNum" placeholder="اكتب رقم جلوسك" onChange={handelValues} value={formValues.seatNum}/>
                 <input type="password" name="password" placeholder="أنشا كلمة سر خاصة بك" onChange={handelValues} value={formValues.password}/>
-                <input type="submit" value="إنشاء حساب" />
+                <input type="submit" value="إنشاء حساب" disabled={loading}/>
             </form>
         </div>
     );
