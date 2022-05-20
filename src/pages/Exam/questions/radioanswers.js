@@ -14,8 +14,8 @@ const RadioAnswers = ({singlequestion}) => {
             {
                 singlequestion.answers.map((singleanswer,i)=>{
                     const answerID = ()=>{
-                        if (singlequestion.answersName) {
-                            return "tof"+singlequestion.answersName
+                        if (singlequestion.toforder) {
+                            return "tof"+singlequestion.toforder
                         } else {
                             return "choosing"+singlequestion.choosingorder
                         }

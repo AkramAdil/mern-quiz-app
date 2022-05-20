@@ -6,7 +6,7 @@ const TrueOrFalse = () => {
     const [questionsArray,setQuestionsList] = useState()
     useEffect(()=>{
         async function getList() {
-            await axios.get("https://arquiz.herokuapp.com/trueorfalse").then(results=>setQuestionsList(results.data))
+            await axios.get("http://127.0.0.1:9090/trueorfalse").then(results=>setQuestionsList(results.data))
         }
         getList()
     },[])
