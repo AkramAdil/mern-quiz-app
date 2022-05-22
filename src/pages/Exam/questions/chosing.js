@@ -7,7 +7,7 @@ const Chosing = () => {
     const [questionsArray,setQuestionsList] = useState()
     useEffect(()=>{
         async function getList() {
-            await axios.get("https://arquote-backend.herokuapp.com/choosing").then(results=>setQuestionsList(results.data))
+            await axios.get("https://arquiz.herokuapp.com/choosing").then(results=>setQuestionsList(results.data))
         }
         getList()
     },[])
