@@ -13,7 +13,7 @@ const Results = () => {
     useEffect(()=>{
         
         async function getTopStudents() {
-            await axios.get("http://127.0.0.1:9090/top",{
+            await axios.get("https://arquote-backend.herokuapp.com/top",{
                 headers: {
                     "x-access-token": localStorage.getItem("token")
                 }
@@ -23,7 +23,7 @@ const Results = () => {
         }
         async function getResult() {            
             //get User Result
-            await axios.get("http://127.0.0.1:9090/user/result",{
+            await axios.get("https://arquote-backend.herokuapp.com/user/result",{
                 headers: {
                     "x-access-token": localStorage.getItem("token")
                 }
@@ -48,7 +48,7 @@ export default Results;
 
 // async function auth() {
         
-//     const sendJWT = await axios.get("http://127.0.0.1:9090/ensure",{
+//     const sendJWT = await axios.get("https://arquote-backend.herokuapp.com/ensure",{
 //         headers: {
 //             "x-access-token": localStorage.getItem("token")
 //         }

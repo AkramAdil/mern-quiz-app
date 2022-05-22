@@ -13,7 +13,7 @@ export default function Exam() {
     const history = useNavigate()
     useEffect(()=>{
         axios({
-            url:"http://127.0.0.1:9090/ensure",
+            url:"https://arquote-backend.herokuapp.com/ensure",
             method: "GET",
             headers: {
                 "x-access-token": localStorage.getItem("token")
@@ -23,7 +23,7 @@ export default function Exam() {
     },[])
     async function sendResult(e) {
         e.preventDefault()
-        await axios.post("http://127.0.0.1:9090/quiz/results",
+        await axios.post("https://arquote-backend.herokuapp.com/quiz/results",
             {
                 answers
             },
