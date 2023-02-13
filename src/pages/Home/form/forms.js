@@ -40,7 +40,7 @@ export default function Forms() {
         const response = await axios(
             {
                 method: 'POST',
-                url: "https://arquiz.herokuapp.com/login",
+                url: "https://ar-quiz.onrender.comlogin",
                 data: {
                     seatNum:loginValues.seatNum,
                     password:loginValues.password,
@@ -66,7 +66,7 @@ export default function Forms() {
         const response = await axios(
             {
                 method: 'POST',
-                url: "https://arquiz.herokuapp.com/register",
+                url: "https://ar-quiz.onrender.comregister",
                 data: {
                     name:registerValues.name, 
                     email:registerValues.email, 

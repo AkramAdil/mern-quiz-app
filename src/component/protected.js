@@ -14,7 +14,7 @@ const Protected = function() {
 
     useEffect(()=>{
         axios({
-            url:"https://arquiz.herokuapp.com/ensure",
+            url:"https://ar-quiz.onrender.comensure",
             method: "GET",
             headers: {
                 "x-access-token": localStorage.getItem("token")
